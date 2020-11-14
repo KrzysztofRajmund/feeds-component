@@ -83,7 +83,7 @@ const FeedsComponent = ({ getFeeds, feeds }) => {
       <Container>
         <Row className="mainRowFeeds col-12">
           <Col className="col-12">
-            <div className="titlePosts">Posts</div>
+            <div className="titlePosts">Recent Posts</div>
           </Col>
           {mappedFeeds}
         </Row>
