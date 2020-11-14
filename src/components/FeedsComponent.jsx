@@ -69,7 +69,7 @@ const FeedsComponent = ({ getFeeds, feeds }) => {
               </button>
             </a>
 
-            <Card.Text className="cardButtonText">
+            <Card.Text className="textDate">
               <small> {dateHandler(new Date(feed.date))}</small>
             </Card.Text>
           </Col>
@@ -79,16 +79,16 @@ const FeedsComponent = ({ getFeeds, feeds }) => {
   ));
 
   return (
-    <div className="feedsContainer">
+    // <div className="feedsContainer">
       <Container>
         <Row className="mainRowFeeds col-12">
           <Col className="col-12">
-            <div className="titlePosts">Recent Posts</div>
+            <div className="titlePosts">Posts</div>
           </Col>
           {mappedFeeds}
         </Row>
       </Container>
-    </div>
+    // </div>
   );
 };
 

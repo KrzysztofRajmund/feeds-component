@@ -1,12 +1,32 @@
+@import './functions';
 @import './variables';
+
 
 
 body {
     color: $textDark;
-    font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  
+    font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif; 
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px,10px;
+    .mainRowFeeds {
+        margin-top: -20px;
+        margin-bottom: 60px;
+        .card {
+            @include borderType(none,0px);
+            margin-top:40px;
+            background-color: transparent;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            img {
+                @include borderType(none,0px);
+            }
+        }
+    }
+}
 
 .titlePosts{
     font-weight:bolder;
@@ -14,19 +34,6 @@ body {
     font-size: 60px;
     line-height: 1.2; 
     margin-top: 70px;   
-}
-
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px,10px;
-}
-
-.mainRowFeeds {
-    margin-top: -20px;
-    margin-bottom: 60px;
 }
 
 .card-img-overlay{
@@ -39,20 +46,18 @@ body {
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
-    
-
     &:hover{
+        @include borderType(none,0px);
         background-color: rgba(245, 246, 247, 0.801);
         opacity:1.0;
     }
+    .cardOverlay{
+        position: absolute;
+        bottom:40px;
+}
 }
 
-div.cardOverlay{
-    position: absolute;
-    bottom:40px;
-}
-
-//card titles
+//cardTitles
 .cardTitle{
     font-size: 24px;
     margin-top: 5%;
@@ -62,7 +67,6 @@ div.cardOverlay{
     padding:0px 10px;
 }
 
-
 .cardTitleTwo{ 
     color:$textColor;
     font-size: 18px;
@@ -70,8 +74,10 @@ div.cardOverlay{
 }
 
 
+
 //buttons
 .cardButton{
+    @include borderType(none,0px);
     margin: 1px 5px 0px 5px;
     padding:8px 15px;
     color:$textDark;
@@ -79,34 +85,28 @@ div.cardOverlay{
     font-weight:600;
     background-color:$backgroundBright;
     max-height: 45px;
-    border:none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     &:hover{
         background-color: $textColor;
         color:$textBright;
     }
+
+    img{
+        padding-left: 8px;
+        width:auto;
+        height:25px;
+        opacity:0.8;
+      }
 }
 
-.cardButton img{
-    padding-left: 8px;
-    width:auto;
-    height:25px;
-    opacity:0.8;
-  
-  }
 
- .cardButtonText{
+ .textDate{
       padding-top: 10px;
       font-style: italic;
   }
 
-div.card {
-    margin-top:40px;
-    border:none;
-    background-color: transparent!important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
+  //media
 @media screen and (max-width:991px){
 
     .cardTitle{
@@ -120,13 +120,11 @@ div.card {
 
     .cardButton{
         font-size:12px;
+        img{
+            padding-left: 8px;
+            height:15px;   
+          }
     }
-    
-    .cardButton img{
-        padding-left: 8px;
-        height:15px;
-   
-      }
     
 }
 
@@ -141,10 +139,11 @@ div.card {
     font-size: 8px;
 }  
 
-.cardButton img{
-  width:auto;
-  height:15px;
-
+.cardButton{  
+    img{
+        width:auto;
+        height:15px; 
+      }
 }
 
 .titlePosts{

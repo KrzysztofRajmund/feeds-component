@@ -3,14 +3,6 @@ body {
   font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
-.titlePosts {
-  font-weight: bolder;
-  letter-spacing: 2.0px;
-  font-size: 60px;
-  line-height: 1.2;
-  margin-top: 70px;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,9 +15,31 @@ body {
   margin: 10px,10px;
 }
 
-.mainRowFeeds {
+.container .mainRowFeeds {
   margin-top: -20px;
   margin-bottom: 60px;
+}
+
+.container .mainRowFeeds .card {
+  border: none;
+  border-radius: 0px;
+  margin-top: 40px;
+  background-color: transparent;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .mainRowFeeds .card img {
+  border: none;
+  border-radius: 0px;
+}
+
+.titlePosts {
+  font-weight: bolder;
+  letter-spacing: 2.0px;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-top: 70px;
 }
 
 .card-img-overlay {
@@ -39,11 +53,13 @@ body {
 }
 
 .card-img-overlay:hover {
+  border: none;
+  border-radius: 0px;
   background-color: rgba(245, 246, 247, 0.801);
   opacity: 1.0;
 }
 
-div.cardOverlay {
+.card-img-overlay .cardOverlay {
   position: absolute;
   bottom: 40px;
 }
@@ -64,6 +80,8 @@ div.cardOverlay {
 }
 
 .cardButton {
+  border: none;
+  border-radius: 0px;
   margin: 1px 5px 0px 5px;
   padding: 8px 15px;
   color: #2b2b2b;
@@ -71,7 +89,6 @@ div.cardOverlay {
   font-weight: 600;
   background-color: #FAFAFA;
   max-height: 45px;
-  border: none;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -88,17 +105,9 @@ div.cardOverlay {
   opacity: 0.8;
 }
 
-.cardButtonText {
+.textDate {
   padding-top: 10px;
   font-style: italic;
-}
-
-div.card {
-  margin-top: 40px;
-  border: none;
-  background-color: transparent !important;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media screen and (max-width: 991px) {
