@@ -23,27 +23,28 @@ const FeedsComponent = ({ getFeeds, feeds }) => {
       "Luty",
       "Marzec",
       "Kwiecień",
+      "Maj",
       "Czerwiec",
       "Lipiec",
       "Sierpień",
       "Wrzesień",
       "Pażdziernik",
       "Listopad",
-      "Grudzień",
+      "Grudzień"
     ];
     let days = [
+      "Niedziela",
       "Poniedziałek",
       "Wtorek",
       "Środa",
       "Czwartek",
       "Piątek",
-      "Sobota",
-      "Niedziela",
+      "Sobota"
     ];
 
-    let dayOfWeek = days[d.getDay() - 1];
+    let dayOfWeek = days[d.getDay()];
     let day = d.getDate();
-    let month = months[d.getMonth() - 1];
+    let month = months[d.getMonth()];
     let year = d.getFullYear();
 
     return `${dayOfWeek}, ${day} ${month} ${year}`;
